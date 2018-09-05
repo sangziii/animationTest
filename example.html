@@ -1,0 +1,48 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>interaction 예제</title>
+    <style>
+
+        .container {
+            width: 1400px;
+        }
+
+        .container:after {
+            display: table;
+            clear: both;
+            content: '';
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list .item {
+            float: left;
+            width: 33.33%;
+            padding-top: 30%;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="list">
+            <li class="item" style="background-image: url(./g.gif)"></li>
+            <li class="item" style="background-image: url(./c.gif)"></li>
+            <li class="item" style="background-image: url(./h.gif)"></li>
+            <li class="item" style="background-image: url(./a.gif)"></li>
+            <li class="item" style="background-image: url(./b.gif)"></li>
+            <li class="item" style="background-image: url(./d.gif)"></li>
+            <li class="item" style="background-image: url(./k.gif)"></li>
+            <li class="item" style="background-image: url(./f.gif)"></li>
+            <li class="item" style="background-image: url(./i.gif)"></li>
+            <li class="item" style="background-image: url(./j.gif)"></li>
+            
+        </ul>
+    </div>
+</body>
+</html>
