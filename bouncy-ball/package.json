@@ -1,0 +1,65 @@
+{
+  "name": "bouncy-ball",
+  "version": "1.0.0",
+  "description": "Compares web animation techniques by bouncing a ball with each one.",
+  "main": "index.html",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "yarn run build:css && yarn run build:js && yarn run build:react",
+    "build:js": "browserify site/js/index.js -o site/assets/bundle.js -t [ babelify --presets [es2015] ] && yarn run build:react",
+    "build:css": "postcss --use stylelint --use postcss-import --postcss-import.path 'node_modules/prismjs/themes' --use postcss-cssnext --use postcss-reporter -o site/assets/styles.css site/css/*.css",
+    "build:react": "babel ./examples/react/script.js -o ./examples/react/script-compiled.js",
+    "test": "eslint site/js/*.js",
+    "start": "node server.js",
+    "watch": "node server.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbox/bouncy-ball.git"
+  },
+  "keywords": [
+    "animation"
+  ],
+  "author": "Bryan Braun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sparkbox/bouncy-ball/issues"
+  },
+  "homepage": "https://github.com/sparkbox/bouncy-ball#readme",
+  "dependencies": {
+    "platform": "^1.3.1",
+    "postcss-reporter": "^3.0.0",
+    "prismjs": "^1.5.1",
+    "remarkable": "^1.6.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.16.0",
+    "browserify": "^13.0.1",
+    "command-line-args": "^3.0.1",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-config-sparkbox": "^0.1.0",
+    "eslint-plugin-flowtype": "^2.20.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "http-rewrite-middleware": "^0.1.6",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-reporter": "^1.4.1",
+    "shelljs": "^0.7.4",
+    "stylelint": "^7.10.1",
+    "stylelint-config-sparkbox": "^0.1.0"
+  }
+}

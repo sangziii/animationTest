@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bouncy Ball - Compare Web Animation Techniques</title>
+  <meta name="description" content="Comparing web animation techniques by showing how to bounce a ball with each one.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="site/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="site/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Bouncy Ball - Compare Web Animation Techniques" />
+  <meta property="og:description" content="Bouncy Ball compares web animation techniques by recreating a simple animation (a bouncing ball) with each one. It's kind of like TodoMVC, but for web animation."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sparkbox.github.io/bouncy-ball" />
+  <meta property="og:image" content="https://sparkbox.github.io/bouncy-ball/site/assets/images/graphic.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Source+Code+Pro|Ubuntu:500" rel="stylesheet">
+  <link rel="stylesheet" href="site/assets/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Bouncy Ball</h1>
+    <p class="description">Comparing web animation techniques by showing how to bounce a ball with each one.</p>
+    <a href="https://github.com/sparkbox/bouncy-ball">
+      <img class="ribbon" style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+        alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+    </a>
+  </header>
+  <form class="selection-bar">
+    <input type="radio" id="vanilla-js" name="approaches" checked="true" />
+    <label for="vanilla-js" class="label label-vanillajs">Vanilla JS</label>
+    <input type="radio" id="css" name="approaches" />
+    <label for="css" class="label label-css">CSS</label>
+    <input type="radio" id="css-step" name="approaches" />
+    <label for="css-step" class="label label-cssstep">CSS (step)</label>
+    <input type="radio" id="jquery" name="approaches" />
+    <label for="jquery" class="label label-jquery">jQuery</label>
+    <input type="radio" id="greensock" name="approaches" />
+    <label for="greensock" class="label label-greensock">GreenSock</label>
+    <input type="radio" id="velocity" name="approaches" />
+    <label for="velocity" class="label label-velocity">Velocity</label>
+    <input type="radio" id="web-animations-api" name="approaches" />
+    <label for="web-animations-api" class="label label-webanimations">Web Animations API</label>
+    <input type="radio" id="p5" name="approaches" />
+    <label for="p5" class="label label-p5">P5.js</label>
+    <input type="radio" id="smil" name="approaches" />
+    <label for="smil" class="label label-smil">SMIL</label>
+    <input type="radio" id="mojs" name="approaches" />
+    <label for="mojs" class="label label-mojs">mo.js</label>
+    <input type="radio" id="anime" name="approaches" />
+    <label for="anime" class="label label-anime">anime.js</label>
+    <input type="radio" id="react" name="approaches" />
+    <label for="react" class="label label-react">React</label>
+    <input type="radio" id="d3" name="approaches" />
+    <label for="d3" class="label label-d3">D3</label>
+    <input type="radio" id="animated-gif" name="approaches" />
+    <label for="animated-gif" class="label label-gif">Animated Gif</label>
+    <input type="radio" id="video" name="approaches" />
+    <label for="video" class="label label-video">Video</label>
+    <input type="radio" id="matter-js" name="approaches" />
+    <label for="matter-js" class="label label-matterjs">Matter.js</label>
+    <input type="radio" id="webgl" name="approaches" />
+    <label for="webgl" class="label label-webgl">WebGL</label>
+    <input type="radio" id="flash" name="approaches" />
+    <label for="flash" class="label label-flash">Flash</label>
+    <input type="radio" id="popmotion" name="approaches" />
+    <label for="popmotion" class="label label-popmotion">Popmotion</label>
+    <input type="radio" id="lottie" name="approaches" />
+    <label for="lottie" class="label label-lottie">Lottie</label>
+  </form>
+  <div class="panes">
+    <div class="docs-toggle">
+      <button class="docs-toggle-link button-link" id="toggle">about
+        <span class="demo-name">Vanilla JS</span>
+      </button>
+    </div>
+    <div class="pane docs-pane">
+      <div class="docs-pane-content"></div>
+    </div>
+    <div class="pane preview-pane">
+      <p class="unsupported" style="display: none">This technique is not supported in your browser.
+        <a href="#" id="learn" class="unsupported-details">Learn more</a>.</p>
+      <iframe class="demo-frame" src="examples/vanilla-js/index.html" name="bouncy ball demo" frameborder="1" scrolling="no"></iframe>
+    </div>
+    <div class="pane source-pane">
+      <pre><code class="language-javascript"></code></pre>
+    </div>
+  </div>
+  <div class="credit">
+    <span>Made by your friends at
+      <a class="credit-link" href="https://twitter.com/hearsparkbox">@hearsparkbox</a>.</span>
+  </div>
+  <script src="site/assets/bundle.js"></script>
+</body>
+
+</html>
